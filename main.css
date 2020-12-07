@@ -1,0 +1,292 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald');
+
+/* COLOR SCHEME hello */
+:root {
+    --space-cadet: #2d3142ff;
+    --silver: #bfc0c0ff;
+    --white: #ffffffff;
+    --mandarin: #ef8354ff;
+    --independence: #4f5d75ff;
+}
+
+html {
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(45,49,66,0.8258258258258259) 0%, rgba(45,49,66,0.9384384384384384) 100%), url("images/background.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bpm-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    color: var(--mandarin);
+    font-size: 20px;
+}
+
+.controls {
+    padding: 15px;
+    text-align: center;
+}
+
+@keyframes dot-animation {
+    from {opacity: 100%;}
+    to {opacity: 10%;}
+}
+
+.dot-animate {
+    animation-name: dot-animation;
+    animation-duration: .65s;
+}
+
+.dot{
+    background-color: var(--mandarin);
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    border-radius: 50px;
+    margin: 5px 5px 5px 5px;
+    align-items: center;
+    font-size: auto;
+}
+
+.dot-transparent {
+    opacity: 10%;
+}
+
+.form-item {
+    margin: 5vh 5vw 5vh 5vw;
+}
+
+h1{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-shadow: 1px 1px black;
+
+}
+
+/* range input stylizing with help from css-tricks.com
+
+https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+
+*/
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid var(--space-cadet);
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: var(--silver);
+    border-radius: 10px;
+  }
+  
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--silver);
+  }
+
+input[type=range]:hover::-webkit-slider-runnable-track {
+    background: var(--space-cadet);
+  }
+
+select {
+    height: 40px;
+    width: 100%;
+    border: 2px solid var(--silver);
+    border-radius: 5px;
+    background-color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    color: var(--mandarin);
+    font-size: 20px;
+    text-align-last:center;
+}
+
+select:hover {
+    border: 2px solid var(--space-cadet);
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: var(--space-cadet);
+}
+
+p{
+    text-align: center;
+    color: var(--space-cadet);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    margin: 10px;
+}
+
+span{
+    margin: auto;
+    color: oldlace;
+}
+
+.start-btn {
+    background-color: var(--space-cadet);
+    color: white;
+    height: 50px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.start-btn:hover {
+    box-shadow: 0px 0px 20px var(--independence);
+    cursor: pointer;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 501px) {
+    
+    .core{
+        position: absolute;
+        height: auto;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 3px solid var(--space-cadet);
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px var(--silver) ;
+        padding: 0px;
+    }
+
+    .dot-container{
+        width: 100% inherit;
+        height: 100% inherit;
+        padding: 10%;
+        margin: 10vh 0;
+        text-align: center;
+    }
+
+    .start-btn {
+        background-color: var(--space-cadet);
+        color: white;
+        height: 50px;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px 0px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    .title-container {
+        background-color: var(--space-cadet);
+        padding: 15px;
+        border-radius: 5px 5px 0px 0px;
+        border: 3px solid var(--space-cadet);
+    }
+
+    
+
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .core{
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        padding: 0px;
+    }
+
+    .dot-container{
+        width: 100% inherit;
+        height: 100% inherit;
+        padding: 10%;
+        text-align: center;
+        margin: 20vh 0;
+    }
+
+    .start-btn {
+        background-color: var(--space-cadet);
+        color: white;
+        height: 50px;
+        width: 70%;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+
+    .title-container {
+        background-color: var(--space-cadet);
+        padding: 15px;
+    }
+
+
+
+}

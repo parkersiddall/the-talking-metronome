@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Talking Metronome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+    <!--favicon links-->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="input-form" class="core input-form col-xl-3 col-sm-6 col-xs-12">
+                <div class="title-container">
+                    <h1>the <br>talking <br>metronome.</h1>
+                </div>
+                <div class="controls">
+                    <div class="form-item">
+                        <label for="timeSig">Time Signature:</label>
+                        <select name="timeSig" id="timeSig">
+                            <option value="2">2/4</option>
+                            <option value="3">3/4</option>
+                            <option value="4" selected="selected">4/4</option>
+                            <option value="5">5/4</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label for="tempo">Tempo:</label>
+                        <input type="range" id="tempo" name="tempo" value="60" min="50" max="130">
+                        <div class="bpm-label">60 BMP</div>
+                    </div>
+                </div>
+                <div id="start" class="start-btn">
+                    START
+                </div>
+            </div>
+            <div id="metronome-div" class="core hidden col-xl-3 col-sm-6 col-xs-12">
+                <div class="title-container">
+                    <h1>the <br>talking <br>metronome.</h1>
+                </div>
+                <div class="dot-container">
+                    <!--this part will insert dynamically vis JS-->
+                    <div class="dot dot-transparent" id="1"><span>1</span></div>
+                    <div class="dot dot-transparent" id="2"><span>2</span></div>
+                    <div class="dot dot-transparent" id="3"><span>3</span></div>
+                    <div class="dot dot-transparent" id="4"><span>4</span></div>
+    
+                </div>
+                <div id="stop" class="start-btn">
+                    STOP
+                </div>
+            </div>
+        </div>
+        <div id="audio-files">
+            <audio src="audio/1.mp3" id="audio-1"></audio>
+            <audio src="audio/2.mp3" id="audio-2"></audio>
+            <audio src="audio/3.mp3" id="audio-3"></audio>
+            <audio src="audio/4.mp3" id="audio-4"></audio>
+        </div>
+    </div>
+</body>
+</html>
