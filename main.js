@@ -115,4 +115,101 @@ document.addEventListener("DOMContentLoaded", function(){
         metronomeDiv.classList.toggle("hidden");
         inputForm.classList.toggle("hidden");
     })
+
+
+    // QUOTES SECTION FOR LARGE SCREEN DISPLAY
+    // dict with quotes to randomly select
+    const quotes = {
+        1: {
+            "author": "Frank Zappa", 
+            "quote": "Without music to decorate it, time is just a bunch of boring production deadlines or dates by which bills must be paid."
+        },
+
+        2: {
+            "author": "Ludwig van Beethoven",
+            "quote": "Music is like a dream. One that I cannot hear."
+        },
+
+        3: {
+            "author": "Plato", 
+            "quote": "Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything."
+        },
+
+        4: {
+            "author": "Albert Einstein", 
+            "quote": "If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music."
+        },
+
+        5: {
+            "author": "Keith Richards", 
+            "quote": "Music is a language that doesn’t speak in particular words. It speaks in emotions, and if it’s in the bones, it’s in the bones."
+        },
+
+        6: {
+            "author": "Billy Joel", 
+            "quote": "I think music in itself is healing. It’s an explosive expression of humanity. It’s something we are all touched by. No matter what culture we’re from, everyone loves music."
+        },
+
+        7: {
+            "author": "Bob Marley", 
+            "quote": "One good thing about music, when it hits you, you feel no pain."
+        },
+
+        8: {
+            "author": "Charles Darwin", 
+            "quote": "If I had my life to live over again, I would have made a rule to read some poetry and listen to some music at least once every week."
+        },
+
+        9: {
+            "author": "Tom Waits",
+            "quote": "I like beautiful melodies telling me terrible things."
+        }, 
+
+        10: {
+            "author": "Lady Gaga", 
+            "quote": "When you make music or write or create, it’s really your job to have mind-blowing, irresponsible, condomless sex with whatever idea it is you’re writing about at the time."
+        },
+
+        11: {
+            "author": "Wolfgang Amadeus Mozart", 
+            "quote": "The music is not in the notes, but in the silence between."
+        },
+
+        12: {
+            "author": "Confucius", 
+            "quote": "Music produces a kind of pleasure which human nature cannot do without."
+        },
+
+        13: {
+            "author": "Michael Jackson", 
+            "quote": "People ask me how I make music. I tell them I just step into it. It’s like stepping into a river and joining the flow. Every moment in the river has its song."
+        }, 
+
+        14: {
+            "author": "Freddie Mercury", 
+            "quote": "I’m just a musical prostitute, my dear."
+        }, 
+
+        15: {
+            "author": "Louis Armstrong", 
+            "quote": "If you have to ask what jazz is, you’ll never know."
+        }, 
+
+        16: {
+            "author": "Bruce Springsteen", 
+            "quote": "A good song takes on more meaning as the years pass."
+        }
+    }
+
+    // select variables to adjust the quote section
+    var quoteText = document.querySelector(".quote-text");
+    var quoteAuthor = document.querySelector(".quote-author");
+
+    // get random number from quotes dict
+    randomNumber = Math.floor((Math.random() * Object.keys(quotes).length + 1));
+
+    // update the text content with the random quote
+    quoteText.innerHTML = `"${quotes[randomNumber]["quote"]}"`;
+    quoteAuthor.innerHTML = `-${quotes[randomNumber]["author"]}`;
+
 })
