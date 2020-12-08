@@ -34,15 +34,25 @@ document.addEventListener("DOMContentLoaded", function(){
         for (var i=1; i <= timeSig; i++) { 
 
             // create the dots that flash the beat
+
+            // firth the text in each dot
             var writtenNumber = document.createElement("span"); 
             var textNode = document.createTextNode(`${i}`); 
             writtenNumber.appendChild(textNode); 
 
+            // then the dot itself
             var dot = document.createElement("div");
             dot.classList = "dot dot-transparent";
-            dot.setAttribute("id", `${i}`)
-            dot.appendChild(writtenNumber);
+            dot.setAttribute("id", `${i}`);
 
+            var diameter = (dotContainer.clientWidth / timeSig) * .50;  // get the ideal diameter based on container size
+            dot.style.width = `${Math.floor(diameter)}px`;  // dynamically change the width of the dots so that they fit on one line
+            dot.style.height = `${Math.floor(diameter)}px`;
+
+            /* find a way to turn up top into a percentage so that it adjusts when screen size changes */
+
+            // put em all together
+            dot.appendChild(writtenNumber);
             dotContainer.appendChild(dot);
 
             // insert the audio tracks for each beat

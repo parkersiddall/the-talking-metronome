@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Source+Sans+Pro:ital,wght@1,300&display=swap');
 
-/* COLOR SCHEME hello */
+/* COLOR SCHEME */
 :root {
     --space-cadet: #2d3142ff;
     --silver: #bfc0c0ff;
@@ -44,8 +44,8 @@ html {
 .dot{
     background-color: var(--mandarin);
     vertical-align: middle;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     display: inline-flex;
     border-radius: 50px;
     margin: 5px 5px 5px 5px;
@@ -201,6 +201,7 @@ span{
 
     .core{
         position: absolute;
+        height: 75vh;
         top: 45%;
         left: 70%;
         transform: translate(-50%, -50%);
@@ -219,15 +220,40 @@ span{
         text-align: center;
     }
 
+    i.fab {
+        color: white;
+        font-size: 2rem;
+        margin: 5px;
+    }
+
     .left-screen {
         position: absolute;
+        height: 75vh;
         top: 45%;
         left: 30%;
         transform: translate(-50%, -50%);
     }
 
+    .logo-container {
+        text-align: center;
+    }
+
+    .project-by {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .project-by-medium-screen {
+        display: none;
+    }
+
     .quote-box {
-        margin: 50px 0px;
+        margin: 35% 0%;
         font-family: 'Montserrat', sans-serif;
         text-shadow: 2px 2px 10px var(--space-cadet);
 
@@ -254,13 +280,17 @@ span{
         margin-right: auto;
         margin-left: auto;
         margin-top: 20px;
-        margin-bottom: 20px;
         padding: 10px 0px;
         border-radius: 5px;
         text-align: center;
         font-weight: bold;
         font-size: 20px;
         vertical-align: middle;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
     }
 
     .title-container {
@@ -276,7 +306,7 @@ span{
     
     .core{
         position: absolute;
-        height: auto;
+        height: 75vh;
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -299,6 +329,23 @@ span{
         display: none;
     }
 
+    i.fab {
+        color: white;
+        font-size: 2rem;
+        margin: 5px;
+    }
+
+    .project-by-medium-screen {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 10px var(--space-cadet);
+    }
+
     .start-btn {
         background-color: var(--space-cadet);
         color: white;
@@ -314,6 +361,10 @@ span{
         font-weight: bold;
         font-size: 20px;
         vertical-align: middle;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .title-container {
