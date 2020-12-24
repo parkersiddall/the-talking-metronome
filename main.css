@@ -197,7 +197,7 @@ span{
     visibility: hidden;
 }
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (min-height: 501px) {
 
     .core{
         position: absolute;
@@ -272,6 +272,10 @@ span{
         color: white;
     }
 
+    .rotate-phone-container {
+        display: none;
+    }
+
     .start-btn {
         background-color: var(--space-cadet);
         color: white;
@@ -302,7 +306,7 @@ span{
 
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 501px) {
+@media only screen and (max-width: 1200px) and (min-width: 501px) and (min-height: 501px) {
     
     .core{
         position: absolute;
@@ -346,6 +350,10 @@ span{
         text-shadow: 2px 2px 10px var(--space-cadet);
     }
 
+    .rotate-phone-container {
+        display: none;
+    }
+
     .start-btn {
         background-color: var(--space-cadet);
         color: white;
@@ -374,12 +382,10 @@ span{
         border: 3px solid var(--space-cadet);
     }
 
-    
-
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) and (min-height: 501px) {
 
     .core{
         position: absolute;
@@ -397,6 +403,18 @@ span{
         margin: 20vh 0;
     }
 
+    .left-screen {
+        display: none;
+    }
+
+    .project-by-medium-screen {
+        display: none;
+    }
+
+    .rotate-phone-container {
+        display: none;
+    }
+
     .start-btn {
         background-color: var(--space-cadet);
         color: white;
@@ -412,12 +430,39 @@ span{
         transform: translate(-50%, -50%);
     }
     
-
     .title-container {
         background-color: var(--space-cadet);
         padding: 15px;
     }
+}
 
+@media only screen and (max-height: 500px) {
+    .core{
+        display: none;
+    }
 
+    .left-screen {
+        display: none;
+    }
+
+    .project-by-medium-screen {
+        display: none;
+    }
+
+    .rotate-phone-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 2px 2px 10px var(--space-cadet);
+    }
+
+    .fa-sync-alt {
+        font-size: 40px;
+        margin: 15px;
+    }
 
 }
