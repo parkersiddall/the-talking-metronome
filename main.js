@@ -83,6 +83,9 @@ document.addEventListener("DOMContentLoaded", function(){
     // add event listener for start
     startBtn.addEventListener("click", function() {
 
+        // adjust height of dot container
+        adjustDotContainerHeight();
+
         // hide the form div, show the metronome div
         inputForm.classList.toggle("hidden");
         metronomeDiv.classList.toggle("hidden");
@@ -221,5 +224,14 @@ document.addEventListener("DOMContentLoaded", function(){
     // update the text content with the random quote
     quoteText.innerHTML = `"${quotes[randomNumber]["quote"]}"`;
     quoteAuthor.innerHTML = `-${quotes[randomNumber]["author"]}`;
+
+    // adjust size of dot-container div in order to be the same as the controls div
+    function adjustDotContainerHeight() {
+        let dotContaniner = document.querySelector('.dot-container');
+        let controlsDiv = document.querySelector('.controls');
+        height = controlsDiv.offsetHeight;
+        dotContainer.style.height = `${height}px`
+    }
+
 
 })

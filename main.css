@@ -201,12 +201,10 @@ span{
 
     .core{
         position: absolute;
-        height: 75vh;
         top: 45%;
         left: 70%;
         transform: translate(-50%, -50%);
         background-color: white;
-        border: 3px solid var(--space-cadet);
         border-radius: 10px;
         box-shadow: 1px 1px 20px var(--silver);
         padding: 0px;
@@ -215,8 +213,7 @@ span{
     .dot-container{
         width: 100% inherit;
         height: 100% inherit;
-        padding: 10%;
-        margin: 10vh 0;
+        padding-top: 40%;
         text-align: center;
     }
 
@@ -243,9 +240,10 @@ span{
         font-family: 'Montserrat', sans-serif;
         color: white;
         position: absolute;
-        bottom: 0px;
+        bottom: 50px;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: -1;
     }
 
     .project-by-medium-screen {
@@ -253,7 +251,7 @@ span{
     }
 
     .quote-box {
-        margin: 35% 0%;
+        margin: 25% 0%;
         font-family: 'Montserrat', sans-serif;
         text-shadow: 2px 2px 10px var(--space-cadet);
 
@@ -289,18 +287,13 @@ span{
         text-align: center;
         font-weight: bold;
         font-size: 20px;
-        vertical-align: middle;
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        transform: translate(-50%, -50%);
         
     }
 
     .title-container {
         background-color: var(--space-cadet);
         padding: 15px;
-        border-radius: 5px 5px 0px 0px;
+        border-radius: 10px 10px 0px 0px;
         border: 3px solid var(--space-cadet);
     }
 
@@ -310,12 +303,10 @@ span{
     
     .core{
         position: absolute;
-        height: 75vh;
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
-        border: 3px solid var(--space-cadet);
         border-radius: 10px;
         box-shadow: 1px 1px 20px var(--silver) ;
         padding: 0px;
@@ -324,8 +315,7 @@ span{
     .dot-container{
         width: 100% inherit;
         height: 100% inherit;
-        padding: 10%;
-        margin: 10vh 0;
+        padding-top: 30%;
         text-align: center;
     }
 
@@ -348,6 +338,7 @@ span{
         left: 50%;
         transform: translate(-50%, -50%);
         text-shadow: 2px 2px 10px var(--space-cadet);
+        z-index: -1;
     }
 
     .rotate-phone-container {
@@ -369,16 +360,12 @@ span{
         font-weight: bold;
         font-size: 20px;
         vertical-align: middle;
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .title-container {
         background-color: var(--space-cadet);
         padding: 15px;
-        border-radius: 5px 5px 0px 0px;
+        border-radius: 10px 10px 0px 0px;
         border: 3px solid var(--space-cadet);
     }
 
@@ -398,9 +385,8 @@ span{
     .dot-container{
         width: 100% inherit;
         height: 100% inherit;
-        padding: 10%;
+        padding-top: 40%;
         text-align: center;
-        margin: 20vh 0;
     }
 
     .left-screen {
